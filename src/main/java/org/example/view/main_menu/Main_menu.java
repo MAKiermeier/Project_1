@@ -13,7 +13,7 @@ public class Main_menu extends Application {
 
         StackPane root = new StackPane(label);
         Scene scene = new Scene(root, 400, 300);
-
+        stage.setMaximized(true);
         stage.setTitle("Mein erstes JavaFX Fenster");
         stage.setScene(scene);
         stage.show();
