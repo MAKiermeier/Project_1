@@ -25,20 +25,15 @@ public class Database {
                         rs.getInt("id") + " | " + rs.getString("name")+ rs.getString("created_at")
                 );
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     public static void read_cards(Connection connection, int deck_id_var) throws SQLException {
         String sql = "SELECT id, deck_id, question, answer, correct_count, wrong_count FROM cards WHERE deck_id = ?";
-
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-
             stmt.setInt(1, deck_id_var);
-
             try (ResultSet rs = stmt.executeQuery()) {
-
             while (rs.next()) {
                 System.out.println(
                         rs.getInt("id") + " | " + rs.getString("question")+ rs.getString("answer")+ rs.getString("correct_count")+ rs.getString("wrong_count")

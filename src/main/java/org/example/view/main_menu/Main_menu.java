@@ -5,8 +5,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-public class Main_menu extends Application {
+import org.example.cards_decks.deck;
 
+import java.util.ArrayList;
+
+public class Main_menu extends Application {
+ArrayList<deck> Arraylist_decks = new ArrayList<>();
     @Override
     public void start(Stage stage) {
         Label label = new Label("Hallo JavaFX!");
